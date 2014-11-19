@@ -4363,6 +4363,12 @@ a.tile:after {
 .video-cover:hover:after {
   box-shadow: inset 0 0 0 4px #c9282d;
 }
+.video__el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
 .video-player {
   position: absolute;
   left: 0;
