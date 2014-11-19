@@ -82,8 +82,16 @@ define([
 			});
 
 		});
+
+		
+
 	}
 
+	// js-insta-play
+	$(document).on('click', '.js-insta-play', function(event) {
+		event.preventDefault();
+		alert("insta!");
+	});
 	window.onYouTubePlayerAPIReady = onYouTubePlayerAPIReady
 
 	var a = document.createElement('script');a.src = 'http://www.youtube.com/player_api';a.async = true;
