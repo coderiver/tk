@@ -786,12 +786,14 @@ button:focus .icon-plus {
   background-color: transparent;
   background-repeat: no-repeat;
   background-image: url("../img/logos.png");
+  display: inline-block;
+  text-indent: -9999px;
+}
+.logo-brand-lg {
   background: url("../img/tina.svg") no-repeat 0 0 !important;
   -webkit-background-size: auto 100% !important;
   -o-background-size: auto 100% !important;
   background-size: auto 100% !important;
-  display: inline-block;
-  text-indent: -9999px;
 }
 .logo-brand-sm,
 .header-sm .logo-brand-sm {

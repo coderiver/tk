@@ -174,13 +174,15 @@
 	background-color:transparent; 
 	background-repeat:no-repeat; 
 	background-image:url(@logos-path); 
+	
+	display:inline-block; 
+	text-indent:-9999px;}
+.logo-brand-lg{
 	background:url(@logo-path) no-repeat 0 0 !important; 
 	-webkit-background-size: auto 100% !important;
 	     -o-background-size: auto 100% !important;
 	        background-size: auto 100% !important;
-	display:inline-block; 
-	text-indent:-9999px;}
-
+}
 .logo-brand-sm,
 .header-sm .logo-brand-sm {width:30px; height:27px; margin-bottom:25px; background-size:floor(@logos-sprite-width * 30px/60px) auto; background-position:ceil(-5px * 30px/60px) ceil(-245px * 30px/60px);  .transition(all .6s);}
 @media (min-width:@grid-breakpoint-width) {
