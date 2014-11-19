@@ -4191,15 +4191,21 @@ a.tile:after {
 .no-touch a.tile:hover:after {
   box-shadow: inset 0 0 0 4px #c9282d;
 }
+@-webkit-keyframes asd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.14);
+    transform: scale(1.14);
+  }
+}
 .no-touch .tile:hover .bg.bg-translucent {
   opacity: 1;
 }
 .no-touch .tile:hover .bg.hover-zoom {
-  -webkit-transition: all 0.4s ease-in-out, transform 3.2s linear;
-  -o-transition: all 0.4s ease-in-out, transform 3.2s linear;
-  transition: all 0.4s ease-in-out, transform 3.2s linear;
-  -webkit-transform: scale(1.14);
-  transform: scale(1.14);
+  -webkit-animation: asd 3.2s linear .2s infinite alternate;
 }
 .no-touch .tile:hover .hover-show.cover:before {
   opacity: 1;
