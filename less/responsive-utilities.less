@@ -105,6 +105,16 @@
     display: none !important;
   }
 }
+.hidden-grid-md {
+  @media (max-height:@grid-breakpoint-md-max), (max-width:(@grid-breakpoint-width - 1)) {
+    display: none !important;
+  }
+}
+// .hidden-grid-lg {
+//   @media (max-height:@grid-breakpoint-lg-max), (max-width:(@grid-breakpoint-width - 1)) {
+//     display: none !important;
+//   }
+// }
 .visible-grid-sm,
 .visible-grid-lg {
   display: none !important;

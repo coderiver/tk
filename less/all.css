@@ -4205,6 +4205,9 @@ a.tile:after {
   opacity: 1;
 }
 .no-touch .tile:hover .bg.hover-zoom {
+  -webkit-transition: all 0.4s ease-in-out, transform 3.2s linear;
+  -o-transition: all 0.4s ease-in-out, transform 3.2s linear;
+  transition: all 0.4s ease-in-out, transform 3.2s linear;
   -webkit-animation: asd 3.2s linear .2s infinite alternate;
 }
 .no-touch .tile:hover .hover-show.cover:before {
@@ -5161,6 +5164,11 @@ a.tile:after {
 }
 @media (max-height: 539px), (max-width: 767px) {
   .hidden-grid-sm {
+    display: none !important;
+  }
+}
+@media (max-height: 768px), (max-width: 767px) {
+  .hidden-grid-md {
     display: none !important;
   }
 }
