@@ -1,0 +1,23 @@
+// Contextual backgrounds
+
+.bg-variant(@color) {
+  background-color: @color;
+  a&:hover {
+    background-color: darken(@color, 10%);
+  }
+}
+
+.bg-position-variant(@position, @position-hover: @position) {
+	background-position:@position;
+
+	&[href]:hover,
+	&[href]:focus,
+	button&:hover,
+	button&:focus,
+	[href]:hover &,
+	[href]:focus &,
+	button:hover &,
+	button:focus & {
+		background-position:@position-hover;
+	}
+}

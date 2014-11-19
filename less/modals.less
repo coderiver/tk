@@ -1,0 +1,177 @@
+//
+// Modals
+// --------------------------------------------------
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+    .transition-transform(~"2.3s ease-out");
+
+  background-color:@modal-bg;
+  color:@brand-info;
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade {
+    .scale(0);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in { .scale(1) }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin:0px;
+}
+
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+  &:extend(.clearfix all);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: @modal-backdrop-bg;
+  &.fade { opacity:0; }
+  &.in { opacity:@modal-backdrop-opacity; }
+}
+
+.modal-aside {
+	color:#666;
+	font-size:@font-size-smaller;
+	margin-bottom:@line-height-computed;
+}
+
+.modal-body {
+	position:relative;
+	padding:15px;
+}
+
+.modal-title {
+	font-size:(0.5 * @font-size-h1);
+	line-height:1;
+	margin-bottom:(1 * @line-height-computed);
+	padding-right:34px;
+}
+
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.modal {
+	.btn-close {
+		position:absolute;
+		top:10px;
+		right:10px;
+		z-index:2;
+		width:38px;
+		height:38px;
+		background:url(@icons-path) -141px -120px no-repeat;
+		border:0;
+		padding:0;
+		margin:0;
+		outline:0; 
+		text-indent:-9999px;
+		cursor:pointer;
+	}
+
+	~ .btn-circle {
+		position:fixed;
+		bottom:-80px;
+		left:20px;
+		border-color:@brand-primary;
+		z-index: (@zindex-modal + 1);
+		display:none;
+		
+		&:hover,
+		&:focus {background:@brand-primary;}
+
+		&.affix {bottom:20px;}
+	}
+
+	.panel {
+		border:1px solid @brand-primary;
+		padding:16px 20px; 
+		margin-bottom:@line-height-computed;
+		text-transform:uppercase;
+		background:transparent;
+		font-size:@font-size-small;
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.modal-dialog {
+		margin:40px;
+	}
+
+	.modal {
+		.btn-close {
+			top:-20px;
+			bottom:-20px;
+		}
+		~ .btn-circle {
+			display:block;
+		}
+	}
+	.modal-title {
+		font-size:@font-size-h1;
+		margin-bottom:(1.5 * @line-height-computed);
+		padding-right:38px;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	.modal-dialog {
+		margin:60px;
+	}
+
+	.modal-aside {
+		position:absolute;
+		right:100%;
+		width:33.33%;
+		top:0;
+		margin-right:20px;
+	}
+	.modal-body {
+		width:60%;
+		max-width:960px;
+		margin:0 auto;
+		font-size:ceil((@font-size-base * 1.125));
+		line-height:1.66667;
+
+		> .panel {position:absolute; left:100%; width:33.33%; margin-left:20px;}
+	}
+}
+
+.page-modal {display:block; position:relative; overflow-x: hidden; overflow-y: auto;}

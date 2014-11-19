@@ -1,0 +1,36 @@
+.swiper {position:relative;}
+.swiper-wrapper{position:relative;width:100%;height:100%;-webkit-transition-property:-webkit-transform,left,top;-webkit-transition-duration:0s;-webkit-transform:translate3d(0px,0,0);-webkit-transition-timing-function:ease;-moz-transition-property:-moz-transform,left,top;-moz-transition-duration:0s;-moz-transform:translate3d(0px,0,0);-moz-transition-timing-function:ease;-o-transition-property:-o-transform,left,top;-o-transition-duration:0s;-o-transform:translate3d(0px,0,0);-o-transition-timing-function:ease;-o-transform:translate(0px,0px);-ms-transition-property:-ms-transform,left,top;-ms-transition-duration:0s;-ms-transform:translate3d(0px,0,0);-ms-transition-timing-function:ease;transition-property:transform,left,top;transition-duration:0s;transform:translate3d(0px,0,0);transition-timing-function:ease;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+
+.translate-z {transform: translate3d(0,0,1px); -webkit-transform:translate3d(0,0,1px);}
+
+
+
+#colorbox, #cboxOverlay, #cboxWrapper{outline:0; z-index:9999; overflow:hidden;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+#colorbox{outline:0; position:fixed; top:0; left:0; right:0; bottom:0; background:@brand-info;}
+#cboxWrapper {display:block; width:100%; height:100%;}
+#cboxContent {position:relative; background:@brand-info; overflow:hidden; width:100%; height:100%;}
+#cboxLoadedContent{overflow:visible; white-space:nowrap; font-size:0; width:100%; height:100%; text-align:center;}
+#cboxLoadedContent:before {content:''; height:100%; display:inline-block; vertical-align: middle;}
+.cboxPhoto {width:auto; max-width:100%;height:auto; max-height:100%; display:inline-block; white-space:normal; vertical-align:middle;}
+.cboxIframe{width:80%; height:80%; border:0; padding:0; margin:0; display:inline-block; white-space:normal; vertical-align:middle;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadingOverlay{background:url(../img/loader-inverse.gif) no-repeat center center;}
+#cboxLoadingGraphic{background:url(../img/loader-inverse.gif) no-repeat center center;}
+#cboxTitle{position:absolute; bottom:25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+#cboxCurrent{display:none;}
+#cboxPrevious, #cboxNext, #cboxClose {position:absolute; top:50%; width:22px; height:54px; margin-top:-27px; border:0; padding:0; margin:0; overflow:visible; outline:0; text-indent:-9999px;
+	background-image:url(@icons-path);
+	background-color:transparent;
+	background-repeat:no-repeat;
+}
+#cboxPrevious{left:20px; .bg-position-variant(~"-185px -88px", ~"-185px -143px");}
+#cboxNext{right:20px; .bg-position-variant(~"-208px -88px", ~"-208px -143px")}
+#cboxClose{right:20px; top:20px; margin-top:0; width:38px; height:38px; .bg-position-variant(~"-141px -86px", ~"-141px -120px");}
+#cboxOverlay {background:@brand-info;}
+
+a.pluso-more {display:none !important;}

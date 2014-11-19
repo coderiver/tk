@@ -1,0 +1,258 @@
+//
+// Navbars
+// --------------------------------------------------
+
+.navbar {
+  position: relative;
+  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-bottom: @navbar-margin-bottom;
+
+  // Prevent floats from breaking the navbar
+  &:extend(.clearfix all);
+}
+
+
+.header {
+	position:relative;
+	height:100%;
+	width:@header-width;
+	margin:0;
+	float:left;
+	z-index:1000;
+	color:@header-color;
+	.transition(width .2s);
+
+	> .navbar-collapse {
+		position:fixed;
+		left:0;
+		top:0;
+		bottom:0;
+		width:@header-width;
+		overflow:hidden;
+		background:@header-bg;
+		box-shadow:0 0 20px rgba(0,0,0,.5);
+		.transition(width .6s);
+
+		> .navbar-collapse-toggle {
+			position:absolute;
+			top:0;
+			left:0;
+			bottom:0;
+			z-index:101;
+			width:@header-width;
+			padding:20px 10px;
+			cursor:pointer;
+			.transition(all .6s);
+			.user-select(none);
+
+			.logo-brand-sm {display:block;}
+		}
+		&.open > .navbar-collapse-toggle {top:-53px;}
+
+		> .navbar-collapse-footer {
+			position:absolute;
+			left:0px;
+			width:@header-width;
+			bottom:20px;
+			z-index:102;
+			padding:0 2px;
+			text-align:center;
+			font-size:ceil((@font-size-base * 0.62));;
+			.transition(all .6s);
+		}
+		&.open > .navbar-collapse-footer {bottom:-106px;}
+
+		> .navbar-collapse-dropdown {
+			position:absolute;
+			top:20px;
+			right:0px;
+			bottom:0;
+			z-index:100;
+			width:100%;
+			min-width:320px;
+			display:block; 
+			overflow:hidden;
+			padding-left:80px;
+			opacity:0;
+			.transition(all .6s);
+		}
+		&.open > .navbar-collapse-dropdown {opacity:1;}
+
+		&.open {width:100%;}
+	}
+
+	@media (min-width:@grid-breakpoint-width) {
+		& {
+			//width:@header-width-lg;
+
+			> .navbar-collapse {
+				width:@header-width-lg;
+
+				> .navbar-collapse-toggle {
+					width:@header-width-lg;
+					padding:20px 20px;
+				}
+				&.open > .navbar-collapse-toggle {top:-64px;}
+
+				> .navbar-collapse-footer {
+					width:@header-width-lg;
+				}
+				> .navbar-collapse-dropdown {
+					width:360px;
+					padding-left:100px;
+
+					.list-inline-ext {
+						margin-left:-9px;
+						> li {
+							padding-left:9px;
+							padding-right:9px;
+						}
+					}
+				}
+				&.open {width:360px;}
+			}
+		}
+
+		&.header-sm {
+
+			> .navbar-collapse {
+				width:@header-width;
+
+				> .navbar-collapse-toggle {
+					width:@header-width;
+					padding:20px 10px;
+				}
+				&.open > .navbar-collapse-toggle {top:-53px;}
+
+				> .navbar-collapse-footer {
+					width:@header-width;
+					.hidden-grid-sm {opacity:0;}
+				}
+				&.open {width:360px;}
+			}
+
+		}
+
+	}
+
+	@media (min-width:@grid-breakpoint-width-lg) {
+		& {
+			> .navbar-collapse {
+				> .navbar-collapse-dropdown {
+					width:460px;
+					padding-left:115px;
+
+					.list-inline-ext {
+						margin-left: -12px;
+						> li {
+							padding-left: 12px;
+							padding-right: 12px;
+						}
+					}
+				}
+				&.open {width:460px;}
+			}
+			&.header-sm > .navbar-collapse.open {width:460px;}
+		}
+	}
+
+	.nav-main {padding:20px 0 16px;}
+	.media {font-size:12px; line-height:1.4; margin-bottom:16px;}
+	@media (min-height:(@grid-breakpoint-md-min - 60)) {
+		.nav-main {padding:25px 0;}
+		.media {font-size:14px; margin-bottom:25px;}
+	}
+	@media (min-height:@grid-breakpoint-md-min) {
+		.nav-main {padding:30px 0;}
+		.media {font-size:14px; margin-bottom:30px;}
+	}
+	@media (min-height:(@grid-breakpoint-md-min + 120)) {
+		.nav-main {padding:50px 0;}
+		.media {margin-bottom:50px;}
+	}
+	@media (min-height:@grid-breakpoint-lg-min) {
+		.nav-main {padding:65px 0;}
+		.media {font-size:16px; margin-bottom:65px;}
+	}
+	@media (min-height:(@grid-breakpoint-lg-min + 100)) {
+		& > .navbar-collapse > .navbar-collapse-dropdown {top:70px;}
+		.nav-main {padding:70px 0;}
+		.media {margin-bottom:75px;}
+	}
+}
+
+.btn-toggle {
+	padding:0;
+	border:0;
+	background:transparent;
+
+	&:focus,
+	&:active {outline:0;}
+
+	.header-sm & > .helper,
+	& > .helper {
+		position: relative;
+		width: 30px;
+		height: 4px;
+		display: block;
+		background: #fff;
+		transition: 0.5s;
+
+		&:before,
+		&:after {content: ""; width:100%; height:100%; background:#fff; position:absolute; left:0; top:0; z-index:1; transition: 0.5s;}
+		&:before {.translate(0,-12px);}
+		&:after {.translate(0,12px);}
+	}
+	
+	.header-sm .navbar-collapse-toggle:hover > &,
+	.header-sm .navbar-collapse-toggle:focus > &,
+	.navbar-collapse-toggle:hover > &,
+	.navbar-collapse-toggle:focus > & {
+		& > .helper:before {.translate(0,-14px);}
+		& > .helper:after {.translate(0,14px);}
+	}
+
+	.header-sm > .open > .navbar-collapse-toggle > &,
+	.open > .navbar-collapse-toggle > & {
+		& > .helper {
+			background:transparent;
+
+			&:before,
+			&:after {top: 0 !important;}
+			&:before {.rotate(-45deg)}
+			&:after {.rotate(45deg)} 
+		}
+	}
+
+
+	@media (min-width:@grid-breakpoint-width) {
+		& > .helper {
+			width:40px;
+
+			&:before {.translate(0,-15px);}
+			&:after {.translate(0,15px);}
+		}
+
+		.navbar-collapse-toggle:hover > &,
+		.navbar-collapse-toggle:focus > & {
+			& > .helper:before {.translate(0,-17px);}
+			& > .helper:after {.translate(0,17px);}
+		}
+
+		.open > .navbar-collapse-toggle > & {
+			& > .helper {
+				&:before {.rotate(-45deg)}
+				&:after {.rotate(45deg)} 
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+

@@ -157,9 +157,7 @@
 						<span class="content">
 							<span class="media">
 								<span class="media-heading-small">20 часов назад</span>
-								<span class="cutme">
-								Очень хорошие дороги в <span class="muted">#istanbul</span> Съездила в <span class="muted">#izmit</span> очень чень интересный город, как предполагалось исходя из странички на Википедии. Возраст 5 тыс.летчень интересный город, как предполагалось исходя из странички на Википедии. Возраст 5 тыс.летинтересный город, как предполагалось исходя из странички на Википедии. Возраст 5 тыс.лет...
-								</span>
+								Очень хорошие дороги в <span class="muted">#istanbul</span> Съездила в <span class="muted">#izmit</span> очень интересный город, как предполагалось исходя из странички на Википедии. Возраст 5 тыс.лет...
 							</span>
 						</span>
 						<span class="content-footer">
@@ -429,7 +427,7 @@
 	<!-- /scripts -->
 
 <script type="text/JavaScript">
-$( document ).ready(function() {
+jQuery(function() {
 alert('xxx');
 	$('.page-lg-w-4 .content .media').each(
 				function(){
