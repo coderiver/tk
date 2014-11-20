@@ -4239,9 +4239,9 @@ a.tile:after {
   }
 }
 .tile-grid:not(.transition-disabled) .tile {
-  -webkit-transition: transform 0.24s ease-in-out, opacity 0.24s ease-in-out;
-  -o-transition: transform 0.24s ease-in-out, opacity 0.24s ease-in-out;
-  transition: transform 0.24s ease-in-out, opacity 0.24s ease-in-out;
+  -webkit-transition: all 0.24s ease-in-out;
+  -o-transition: all 0.24s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 .tile-grid.loading .tile {
   opacity: 0;
@@ -4252,6 +4252,7 @@ a.tile:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transform: translate3d(0px, 0px, 0px);
 }
 .tile-nav .content {
   position: relative;
