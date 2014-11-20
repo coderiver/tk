@@ -804,9 +804,9 @@ button:focus .icon-plus {
 }
 .logo-brand-lg {
   background: url("../img/tina.svg") no-repeat 0 0 !important;
-  -webkit-background-size: auto 100% !important;
-  -o-background-size: auto 100% !important;
-  background-size: auto 100% !important;
+  -webkit-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important;
 }
 .logo-brand-sm,
 .header-sm .logo-brand-sm {
