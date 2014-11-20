@@ -193,6 +193,19 @@ th {
   -o-transition: opacity ease-in-out .2s;
   transition: opacity ease-in-out .2s;
 }
+.icon-tripadvisor-inverse {
+  background: none;
+  height: 24px;
+  width: 30px;
+  display: inline-block;
+}
+.icon-tripadvisor-inverse svg {
+  height: 24px !important;
+  width: 30px !important;
+}
+.list-inline a:hover svg path {
+  fill: #c9282d;
+}
 .icon-instagram,
 .icon-instagram-primary,
 .icon-instagram-inverse {
