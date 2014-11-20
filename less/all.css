@@ -5185,6 +5185,9 @@ a.tile:after {
     display: none !important;
   }
 }
+.hideme {
+  z-index: 0;
+}
 @media (max-height: 539px), (max-width: 767px) {
   .hidden-grid-sm {
     display: none !important;
