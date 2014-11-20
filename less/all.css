@@ -730,7 +730,7 @@ button:focus .icon-arrow-bottom {
 .icon-arrow-right-inverse {
   width: 27px;
   height: 18px;
-  background-position: -240px -130px;
+  background-position: -240px -123px;
   -webkit-transition: all 0s 0.12s;
   -o-transition: all 0s 0.12s;
   transition: all 0s 0.12s;
