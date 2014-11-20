@@ -40,13 +40,19 @@ define([
 					iplayer.play();
 				}
 
-				video.addClass('is-play');
+				video.next().addClass('is-play');
 				$('<div class="video-backdrop fade in" />').appendTo('.main > .swiper-wrapper').on('click', function(event) {
 					event.preventDefault();
 					$(this).remove();
-					$this.removeClass('is-play');
+					// $('.video__el').remove();
+					$('.is-play').removeClass('is-play');
 					$('body').removeClass('video-open');
-					pauseVideo();
+					var video_id = $this.find('.video__el').attr('id'),
+			  					iplayer = iplayers[video_id];
+			  					// alert(video_id);
+			  			iplayer.pause();
+			  			// alert($this.html());
+					// pauseVideo();
 					//if (window.mainSwiper) {
 					//	window.mainSwiper.enableMousewheelControl()
 					//}

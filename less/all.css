@@ -4367,6 +4367,9 @@ a.tile:after {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
+}
+.video__el.is-play {
   z-index: 10000;
 }
 .video-player {
