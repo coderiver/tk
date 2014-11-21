@@ -3937,7 +3937,6 @@ tbody.collapse.in {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 100%;
   display: inline-block;
   white-space: normal;
   vertical-align: middle;
@@ -4422,6 +4421,9 @@ a.tile:after {
 }
 .video-open .header > .navbar-collapse {
   display: none;
+}
+.vjs-control-bar {
+  display: none !important;
 }
 .main {
   height: 100%;
