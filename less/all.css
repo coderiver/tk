@@ -851,6 +851,93 @@ button:focus .icon-plus {
     margin-left: -13px;
   }
 }
+.socials a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.icon__insta {
+  background: url("../img/icon-2.png") 0 -200px no-repeat;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: -7px;
+}
+.icon__insta:hover {
+  background: url("../img/icon-2.png") 0 -250px no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.icon__fb {
+  background: url("../img/icon-2.png") 0 -450px no-repeat;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: -7px;
+}
+.icon__fb:hover {
+  background: url("../img/icon-2.png") 0 -400px no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.icon__tw {
+  background: url("../img/icon-2.png") 0 -150px no-repeat;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: -7px;
+}
+.icon__tw:hover {
+  background: url("../img/icon-2.png") 0 -100px no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.icon__trip {
+  background: url("../img/icon-2.png") 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: -7px;
+}
+.icon__trip:hover {
+  background: url("../img/icon-2.png") 0 -50px no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.icon__vk {
+  background: url("../img/icon-2.png") 0 -300px no-repeat;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: -7px;
+}
+.icon__vk:hover {
+  background: url("../img/icon-2.png") 0 -350px no-repeat;
+  width: 40px;
+  height: 40px;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4045,6 +4132,15 @@ button:focus #cboxClose {
 }
 a.pluso-more {
   display: none !important;
+}
+.pluso a {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  position: relative;
+  top: 4px;
+}
+.pluso a:hover {
+  opacity: .5;
 }
 .tile {
   display: block;

@@ -8,7 +8,13 @@ define([
 
 		var players = {},
 					iplayers = {};
+		$('.icon-instagram-inverse').click(function(event) {
+			alert('a');
+			window.location = 'http://google.com';
+		});
 		$(document).on('click', '.js-insta-play', function(event) {
+			console.log(event);
+			alert(event.target);
 			event.preventDefault();
 			// alert('what');
 
