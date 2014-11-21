@@ -438,7 +438,7 @@ button:focus .icon-facebook-inverse {
     background-position: -134px -26px;
   }
   .icon-twitter {
-    background-position: -134px -104px;
+    background-position: -134px 0px;
   }
   .icon-twitter[href]:hover,
   .icon-twitter[href]:focus,
