@@ -129,29 +129,30 @@
 	@media (min-height:@grid-breakpoint-md-min) and (max-height:(@grid-breakpoint-md + 30)) and (min-width:@grid-breakpoint-width) {
 		.content-header,
 		.content-footer {
-			padding:12px;
+			padding:12px 0 8px;
 		}
 		.content {
-			padding:0 10px;
-			top:50px;
-			bottom:38px;
+			padding:0 8px;
+			top:44px;
+			bottom:33px;
+			.media-heading-small {margin-bottom:2px;}
 		}
 	}
 	@media (min-height:(@grid-breakpoint-md + 30)) and (max-height:(@grid-breakpoint-md + 60)) and (min-width:@grid-breakpoint-width) {
 		.content-header,
 		.content-footer {
-			padding:15px;
+			padding:14px;
 		}
 		.content {
 			padding:0 14px;
 			top:56px;
 			bottom:42px;
 		}
+		.bg-title-shelestovo {background-size:240px auto;}
 	}
 }
 
 .tile-grid:not(.transition-disabled) .tile {
-	// .transition(transform .24s ease-in-out, opacity .24s ease-in-out;);
 	.transition(all .24s ease-in-out;);
 	}
 .tile-grid.loading .tile {opacity:0; .scale(0);}
