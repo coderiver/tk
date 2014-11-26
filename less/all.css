@@ -3465,12 +3465,12 @@ tbody.collapse.in {
     width: 360px;
     padding-left: 100px;
   }
-  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline-ext {
-    margin-left: -9px;
+  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline {
+    margin-left: -8px;
   }
-  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline-ext > li {
-    padding-left: 9px;
-    padding-right: 9px;
+  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline > li {
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .header > .navbar-collapse.open {
     width: 360px;
@@ -3500,12 +3500,12 @@ tbody.collapse.in {
     width: 460px;
     padding-left: 115px;
   }
-  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline-ext {
-    margin-left: -12px;
+  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline {
+    margin-left: -10px;
   }
-  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline-ext > li {
-    padding-left: 12px;
-    padding-right: 12px;
+  .header > .navbar-collapse > .navbar-collapse-dropdown .list-inline > li {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .header > .navbar-collapse.open {
     width: 460px;
@@ -4327,23 +4327,29 @@ a.tile:after {
 @media (min-height: 540px) and (max-height: 570px) and (min-width: 768px) {
   .tile .content-header,
   .tile .content-footer {
-    padding: 12px;
+    padding: 12px 0 8px;
   }
   .tile .content {
-    padding: 0 10px;
-    top: 50px;
-    bottom: 38px;
+    padding: 0 8px;
+    top: 44px;
+    bottom: 33px;
+  }
+  .tile .content .media-heading-small {
+    margin-bottom: 2px;
   }
 }
 @media (min-height: 570px) and (max-height: 600px) and (min-width: 768px) {
   .tile .content-header,
   .tile .content-footer {
-    padding: 15px;
+    padding: 14px;
   }
   .tile .content {
     padding: 0 14px;
     top: 56px;
     bottom: 42px;
+  }
+  .tile .bg-title-shelestovo {
+    background-size: 240px auto;
   }
 }
 .tile-grid:not(.transition-disabled) .tile {
@@ -4850,8 +4856,8 @@ a.tile:after {
 }
 .activities-swiper {
   position: absolute;
-  top: 80px;
-  bottom: 80px;
+  top: 30px;
+  bottom: 30px;
   left: 0;
   right: 0;
 }
@@ -4868,31 +4874,6 @@ a.tile:after {
 .activities-swiper > .swiper-wrapper {
   width: 100% !important;
   height: 100%;
-}
-.activities-swiper > .swiper-wrapper:before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  z-index: 30;
-  width: 70px;
-  height: 70px;
-  margin-left: -35px;
-  background: #f8e3ca;
-  border: 1px solid #d5c3ad;
-  border-radius: 50%;
-  outline: none;
-}
-.activities-swiper > .swiper-wrapper:after {
-  content: '';
-  position: absolute;
-  top: -38px;
-  left: 50%;
-  z-index: 30;
-  width: 22px;
-  height: 27px;
-  margin-left: -11px;
-  background: url("../img/icons.png") -59px -300px;
 }
 .activities-swiper .item {
   position: relative;
@@ -4981,10 +4962,6 @@ a.tile:after {
 @media (min-height: 540px) {
   .page-activities > .page-header:before {
     width: 2px;
-  }
-  .activities-swiper > .swiper-wrapper:before,
-  .activities-swiper > .swiper-wrapper:after {
-    display: none;
   }
   .activities-swiper .swiper-nav {
     display: block;
